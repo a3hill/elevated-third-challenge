@@ -48,8 +48,8 @@ var gulp        = require('gulp'),
  browserSync.init({
    // Change as required
   open:  'external',
-  host:  'aubriehill.dev',
-  proxy: 'aubriehill.dev',
+  host:  'elevated-third.dev',
+  proxy: 'elevated-third.dev',
   port:  3000
 
   /*socket: {
