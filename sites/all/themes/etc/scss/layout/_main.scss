@@ -30,6 +30,7 @@
 
   figure {
     margin: 1em 0 0;
+    overflow: hidden;
 
     @media #{$medium-up} {
       position: absolute;
@@ -37,8 +38,28 @@
       top: -20%;
       width: 60%;
       margin: 0;
-      clip-path:url(/#angle-1);
-      @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%));
+      // clip-path not supported in IE or edge
+      // clip-path:url(/#angle-1);
+      // @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%));
+
+      @media #{$xxlarge-up} {
+        right: -10%;
+      }
+
+      img {
+        margin-top: 1px;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 110%;
+        bottom: 0;
+        left: -87%;
+        background: $white;
+        @include transform(skewX(25deg));
+      }
     }
   }
 }
@@ -66,9 +87,9 @@ article{
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .button{
   text-transform: uppercase;
-  @include transform(skewX(-10deg));
   font-weight: bold;
   font-size: rem-calc(14);
+  @include transform(skewX(-10deg));
 
   span {
     display: block;
@@ -109,16 +130,30 @@ article{
   }
 	.date {
 		position: absolute;
+    z-index: 100;
 		top: 0;
 		right: 10%;
 		width: rem-calc(100);
-		background: $white;
+		// background: $white;
 		text-align: center;
     font-weight: bold;
-    clip-path:url(/#angle-2);
-    @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 0% 91%));
+    // clip-path not supported in IE or edge
+    // clip-path:url(/#angle-2);
+    // @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 0% 91%));
+    &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -10%;
+        left: 0;
+        background: $white;
+        @include transform(skewY(10deg));
+      }
 
 		.month {
+      position: relative;
+      z-index: 10;
 			text-transform: uppercase;
 			color: $blue;
       padding-top: 1em;
@@ -126,6 +161,8 @@ article{
 		}
 
     .day {
+      position: relative;
+      z-index: 10;
       font-size: 2rem;
       letter-spacing: -2px;
       margin-bottom: 1em;
@@ -134,12 +171,35 @@ article{
 
   figure {
     margin: 0;
-    clip-path:url(/#angle-3);
-    @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%));
+    // clip-path not supported in IE or edge
+    // clip-path:url(/#angle-3);
+    // @include clip-path(polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%));
 
     .picture-wrapper {
       max-height: rem-calc(200);
       overflow: hidden; 
+      position: relative;
+
+      picture {
+        position: relative;
+        z-index: 1;
+
+        img {
+          margin-left: 1px;
+        }
+      }
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 50%;
+        top: 85%;
+        background: $white;
+        @include transform(skewY(10deg));
+      }
     }
   }
 

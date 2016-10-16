@@ -14,9 +14,9 @@ var gulp        = require('gulp'),
 
     jsLibs = [
       // base_theme_path + '/js/vendor/placeholder.js',
-      // base_theme_path + '/js/vendor/fastclick.js'
-      'js/jquery.waypoints.min.js'
-      // 'js/svg4everybody.min.js'
+      base_theme_path + '/js/vendor/fastclick.js',
+      'js/jquery.waypoints.min.js',
+      'js/svg4everybody.min.js'
     ];
 
     jsFoundation = [
