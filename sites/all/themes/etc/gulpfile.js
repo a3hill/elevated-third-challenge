@@ -2,10 +2,11 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     concat      = require('gulp-concat'),
     sass        = require('gulp-sass'),
-    jshint      = require('gulp-jshint');
-    uglify      = require('gulp-uglify');
-    rename      = require('gulp-rename');
-    shell       = require('gulp-shell');
+    jshint      = require('gulp-jshint'),
+    uglify      = require('gulp-uglify'),
+    rename      = require('gulp-rename'),
+    shell       = require('gulp-shell'),
+    svgstore = require('gulp-svgstore');
 
     base_theme_path = '../zurb_foundation';
 
@@ -44,7 +45,7 @@ var gulp        = require('gulp'),
 
 
 // Launch the Server
- gulp.task('browser-sync', ['lint','sass', 'scripts'], function() {
+ gulp.task('browser-sync', ['lint','sass','svgstore','scripts'], function() {
  browserSync.init({
    // Change as required
   open:  'external',
@@ -92,6 +93,17 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('js'));
 });
 
+gulp.task('svgstore', function () {
+  return gulp
+    .src('imgs/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true,
+      fileName: 'deficons.svg',
+      prefix: "icon-"
+     }))
+    .pipe(gulp.dest("imgs/"));
+});
+
 
 // @task clearcache
 // Clear all caches
@@ -113,6 +125,7 @@ gulp.task('refresh', ['clearcache'], function () {
 gulp.task('watch', function () {
   gulp.watch(['scss/*.scss', 'scss/**/*.scss'], ['sass']);
   gulp.watch(jsApp, ['lint', 'scripts']);
+  gulp.watch(['imgs/*.svg'], ['svgstore']);
   gulp.watch('**/*.{php,inc,info}',['refresh']);
 });
 

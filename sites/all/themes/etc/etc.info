@@ -71,9 +71,7 @@ regions[triptych_middle]     = Callout two
 regions[triptych_last]       = Callout three
 regions[footer_firstcolumn]  = Footer one
 regions[footer_secondcolumn] = Footer two
-regions[footer_thirdcolumn]  = Footer three
-regions[footer_fourthcolumn] = Footer four
-regions[footer]              = Footer
+regions[social]              = Social
 
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the
@@ -121,3 +119,11 @@ settings[zurb_foundation_disable_core_css] = 0
 settings[zurb_foundation_html_tags] = 1
 settings[zurb_foundation_messages_modal] = 0
 settings[zurb_foundation_pager_center] = 1
+
+; Breakpoints.
+breakpoints[small] = (min-width: 0px)
+breakpoints[medium] = (min-width: 600px)
+breakpoints[large] = (min-width: 800px)
+breakpoints[xlarge] = (min-width: 1000px)
+breakpoints[huge] = (min-width: 1500px)
+

@@ -1,1 +1,28 @@
 @import "../../zurb_foundation/scss/foundation/functions";
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+// Colors
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$dk-grey: #363636;
+$lt-grey: #ebebeb;
+$blue: #15cadb;
+$pink: #f41361;
+
+$primary-color: $pink;
+$secondary-color: $blue;
+
+// Top Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$topbar-bg-color:transparent;
+nav.top-bar {background:none;}
+
+$topbar-link-color: $dk-grey;
+$topbar-link-color-hover: $pink;
+$topbar-link-color-active: $dk-grey;
+$topbar-link-bg-hover: transparent;
+$topbar-link-padding: rem-calc(0);
+$topbar-dropdown-bg: transparent;
+
+$topbar-menu-link-color: $dk-grey;
+$topbar-menu-icon-color: $dk-grey;

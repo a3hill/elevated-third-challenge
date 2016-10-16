@@ -1,1 +1,144 @@
-// Non-modular or client styles for .l-footer region.
+footer{
+  ul {
+    list-style: none;
+
+    li{
+      display: inline;
+      padding: 0.5em;
+
+      a {
+        @include transition(all 0.2s);
+      }
+    }
+  }
+
+// Social Media Menu
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+  .block-menu-menu-social {
+    .block-title {
+      z-index: 10;
+      margin-bottom: 0;
+    }
+
+    ul {
+      background: $lt-grey;
+      line-height: 5.25em;
+      text-align: center;
+      margin: -1em 0 2.5em 0;
+      @include transform(skewX(20deg));
+      width: 96%;
+      margin-left: 2%;
+
+      li{
+        padding: 1.5em;
+
+        svg{
+          fill: $pink;
+          height: 1.25em;
+          @include transform(skewX(-20deg));
+          @include transition(all 0.2s);
+        }
+
+        &:hover svg{
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+// Newsletter Subscribtion
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+  #simple-subscription-form{
+    .simple_subscription_header{
+      font-weight: bold;
+      color: $blue;
+      text-transform: uppercase;
+    }
+    .form-item {
+      display: inline;
+    }
+
+    input {
+      width: 70%;
+      display: inline;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-weight: bold;
+      @include transform(skewX(-10deg));
+      padding: 0.5em 2em;
+      margin-left: -1em;
+      position: relative;
+      color: $pink;
+
+      &:after {
+        content: 'Submit';
+        display: block;
+        position: absolute;
+        color: $white;
+        @include transform(skewX(10deg));
+        top: 0.5em;
+      }
+    }
+  }
+
+// Main Footer Menu
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+  .block-system-main-menu {
+    ul {
+      float: right;
+      clear: both;
+
+      li {
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $dk-grey;
+
+          &:hover{
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+
+// Secondary Menu
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+  .block-menu-menu-secondary-menu {
+    ul {
+      float: right;
+      clear: both;
+
+      li {
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $blue;
+          font-size: rem-calc(12);
+
+          &:hover{
+            color: scale-color($blue, $lightness: -20%);
+          }
+        }
+      }
+    }
+  }
+
+// Address
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+  .block-block-1 {
+    float: right;
+    clear: both;
+
+    p {
+      font-size: rem-calc(12);
+    }
+    
+    a {
+      color: $blue;
+    }
+  }
+
+}

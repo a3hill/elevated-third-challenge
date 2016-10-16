@@ -1,1 +1,110 @@
-// Non-modular or client styles for .l-header region.
+.contain-to-grid{
+  overflow: hidden;
+}
+
+// Menu
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.top-bar {
+  height: rem-calc(90);
+  line-height: rem-calc(90);
+
+  ul li {
+    padding:0 rem-calc(30);
+
+    &>a {
+      text-transform: uppercase;
+      position: relative;
+
+      &:after {
+        background: $pink;
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        content: '';
+        width: 30%;
+        height: 3px;
+        opacity: 0;
+        @include transition(all 0.3s);
+        @include transform(translateY(-10px));
+      }
+
+      &:hover::after,
+      &:focus::after {
+        opacity: 1;
+        @include transform(translateY(0px));
+      }
+    }
+  }
+  ul.main-nav,
+  ul.secondary {
+   li.last  {
+      padding-right:0;
+    }
+  }
+
+  ul.main-nav li:not(.has-form) a:not(.button) {
+    font-size: 1em;
+    line-height: rem-calc(75);
+  }
+
+  ul.secondary {
+    position: relative;
+
+    li{
+      background: $blue;
+      padding:0 rem-calc(25);
+
+      &.first {
+        padding-left:5em;
+      }
+      
+      a:not(.button) {
+        color: $white;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      float: left;
+      width: 5em;
+      height: rem-calc(45);
+      background: $blue;
+      @include transform(skewX(25deg));
+      margin-right: -2em;
+    }
+
+    &:after {
+      content: '';
+      background: $blue;
+      height: rem-calc(45);
+      width: 50%;
+      float: right;
+      position: absolute;
+    }
+  }
+}
+
+// Logo
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+#logo {
+  svg{
+    color: $blue;
+    fill: $white;
+    height: rem-calc(105);
+    margin-top: rem-calc(10);
+    @include transition(all 0.5s);
+  }
+
+  &:hover svg {
+    color: $pink;
+  }
+
+  &:after {
+    display: none;
+  }
+}

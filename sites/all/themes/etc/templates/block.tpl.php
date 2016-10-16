@@ -1,0 +1,21 @@
+<?php if ($block->delta != 'main'): ?>
+<section class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <?php endif; ?>
+
+  <?php print render($title_prefix); ?>
+  <?php if ($block->subject): ?>
+    <div class="sub-head">
+      <h2<?php print $title_attributes; ?>>
+        <span><?php print $block->subject ?></span>
+      </h2>
+    </div>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
+
+  <?php !empty($content_attributes) ? print '<div ' . $content_attributes . '>' : ''; ?>
+
+    <?php print $content ?>
+
+  <?php !empty($content_attributes) ? print '</div>' : ''; ?>
+
+  <?php $block->delta != 'main' ? print '</section>' : ''; ?>

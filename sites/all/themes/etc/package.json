@@ -16,7 +16,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
+    "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.3"
+    "jshint": "^2.9.3",
+    "svgstore": "^1.1.0"
   }
 }

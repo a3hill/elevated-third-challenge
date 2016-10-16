@@ -1,1 +1,189 @@
-// Non-modular or client styles for the .l-content region.
+// Header
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.view-id-header {
+  margin-bottom: 5em;
+
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  h1 {
+    color: $blue;
+    font-weight: bold;
+    font-size: rem-calc(70);
+    text-transform: uppercase;
+    margin-top: 1.5em;
+  }
+
+  p {
+    font-size: rem-calc(30);
+    line-height: 1.2em;
+    margin-bottom: 2em;
+  }
+
+  figure {
+    position: absolute;
+    right: 0;
+    top: -20%;
+    margin: 0;
+    width: 60%;
+
+    img {
+      @include clip-path(polygon(0 0, 100% 0%, 100% 100%, 25% 100%));
+    }
+  }
+}
+
+// Articles
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+article{
+  margin-bottom: 5em;
+
+  .date {
+    color: $blue;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .node-title{
+    a {
+      color: $dk-grey;
+      font-size: rem-calc(30);
+    }
+  }
+}
+
+// Buttons
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.button{
+  text-transform: uppercase;
+  @include transform(skewX(-10deg));
+  font-weight: bold;
+  font-size: rem-calc(14);
+
+  span {
+    display: block;
+    @include transform(skewX(10deg));
+  }
+}
+
+// Sub Heads
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.sub-head{
+  text-align: center;
+}
+
+.block-title {
+  display: inline-block;
+  position: relative;
+  background: $dk-grey;
+  @include transform(skewY(1deg));
+  margin-bottom: 1em;
+
+  span {
+    color: $white;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: rem-calc(30);
+    padding: 0 0.5em;
+    @include transform(skewY(-1deg));
+  }
+}
+
+
+// Upcoming Events
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.view-upcoming-events {
+
+  .medium-4 {
+    margin-bottom: 3em;
+  }
+	.date {
+		position: absolute;
+		top: 0;
+		right: 10%;
+		width: rem-calc(100);
+		background: $white;
+		text-align: center;
+    font-weight: bold;
+    @include clip-path(polygon(0 0, 100% 0%, 100% 100%, 0 91%));
+
+		.month {
+			text-transform: uppercase;
+			color: $blue;
+      padding-top: 1em;
+      font-size: 1rem;
+		}
+
+    .day {
+      font-size: 2rem;
+      letter-spacing: -2px;
+      margin-bottom: 1em;
+    }
+    svg{
+      fill: $white;
+      @include transform-rotate(180);
+    }
+	}
+
+  figure {
+    margin: 0;
+    @include clip-path(polygon(0 0, 100% 0%, 100% 100%, 0 75%));
+
+    .picture-wrapper {
+      max-height: rem-calc(200);
+      overflow: hidden; 
+    }
+  }
+
+  .time {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .title {
+    font-size: rem-calc(30);
+    margin-bottom: 1em;
+    line-height: 1.2em;
+  }
+
+  a{
+    font-size: rem-calc(14);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    .text{
+      border-top: $pink solid 3px;
+      padding: 0.5em 0;
+    }
+    .circle{
+      background: $pink;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      @include border-radius(50%);
+      margin-left: 0.5em;
+      position: relative;
+      top: 3px;
+
+      svg{
+        fill: $white;
+        width: 75%;
+        position: relative;
+        top: -25%;
+        left: 20%;
+      }
+    }
+  }
+}
+
+// Past Events
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.view-display-id-block_3 {
+  .date-display-single {
+    color: $blue;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
