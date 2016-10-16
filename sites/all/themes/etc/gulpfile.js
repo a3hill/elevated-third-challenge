@@ -97,11 +97,10 @@ gulp.task('svgstore', function () {
   return gulp
     .src('imgs/*.svg')
     .pipe(svgstore({
-      inlineSvg: true,
-      fileName: 'deficons.svg',
-      prefix: "icon-"
+      inlineSvg: true
      }))
-    .pipe(gulp.dest("imgs/"));
+    .pipe(rename('imgs.svg'))
+    .pipe(gulp.dest('imgs'));
 });
 
 

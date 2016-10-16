@@ -212,3 +212,17 @@
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
 </div>
 <!--/.page -->
+
+<svg height="0" width="0">
+  <defs>
+    <clipPath id="angle-1" clipPathUnits="objectBoundingBox">
+      <polygon points="0 0, 1 0, 1 1, 0.25 1" />
+    </clipPath>
+    <clipPath id="angle-2" clipPathUnits="objectBoundingBox">
+      <polygon points="0 0, 1 0, 1 1, 0 0.91" />
+    </clipPath>
+    <clipPath id="angle-3" clipPathUnits="objectBoundingBox">
+      <polygon points="0 0, 1 0, 1 1, 0 0.75" />
+    </clipPath>
+  </defs>
+</svg>

@@ -1,10 +1,16 @@
 footer{
   ul {
     list-style: none;
+    margin-left: 0;
 
     li{
       display: inline;
-      padding: 0.5em;
+      padding-right: 0.5em;
+
+      @media #{$medium-up} {
+        padding: 0.5em;
+      }
+
 
       a {
         @include transition(all 0.2s);
@@ -20,22 +26,30 @@ footer{
       margin-bottom: 0;
     }
 
-    ul {
-      background: $lt-grey;
-      line-height: 5.25em;
-      text-align: center;
-      margin: -1em 0 2.5em 0;
+    .block-wrapper {
       @include transform(skewX(20deg));
       width: 96%;
       margin-left: 2%;
+      background: $lt-grey;
+    }
+
+    ul {
+      line-height: 5.25em;
+      text-align: center;
+      margin: -1em 0 2.5em 0;
+      @include transform(skewX(-20deg));
+      
 
       li{
-        padding: 1.5em;
+        padding: 0.75em;
+
+        @media #{$medium-up} {
+          padding: 1.5em;
+        }
 
         svg{
           fill: $pink;
           height: 1.25em;
-          @include transform(skewX(-20deg));
           @include transition(all 0.2s);
         }
 
@@ -59,7 +73,11 @@ footer{
     }
 
     input {
-      width: 70%;
+      width: 60%;
+
+      @media #{$medium-up} {
+        width: 70%;
+      }
       display: inline;
     }
 
@@ -87,8 +105,11 @@ footer{
 // - - - - - - - - - - - - - - - - - - - - - - - - -
   .block-system-main-menu {
     ul {
-      float: right;
-      clear: both;
+      
+      @media #{$medium-up} {
+        float: right;
+        clear: both;
+      }
 
       li {
         a {
@@ -108,8 +129,11 @@ footer{
 // - - - - - - - - - - - - - - - - - - - - - - - - -
   .block-menu-menu-secondary-menu {
     ul {
-      float: right;
-      clear: both;
+      
+      @media #{$medium-up} {
+        float: right;
+        clear: both;
+      }
 
       li {
         a {
@@ -129,13 +153,16 @@ footer{
 // Address
 // - - - - - - - - - - - - - - - - - - - - - - - - -
   .block-block-1 {
-    float: right;
-    clear: both;
+
+    @media #{$medium-up} {
+      float: right;
+      clear: both;
+    }
 
     p {
       font-size: rem-calc(12);
     }
-    
+
     a {
       color: $blue;
     }

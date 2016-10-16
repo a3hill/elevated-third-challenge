@@ -13,9 +13,9 @@
   <?php print render($title_suffix); ?>
 
   <?php !empty($content_attributes) ? print '<div ' . $content_attributes . '>' : ''; ?>
-
+  <div class="block-wrapper">
     <?php print $content ?>
-
+  </div>
   <?php !empty($content_attributes) ? print '</div>' : ''; ?>
 
   <?php $block->delta != 'main' ? print '</section>' : ''; ?>
