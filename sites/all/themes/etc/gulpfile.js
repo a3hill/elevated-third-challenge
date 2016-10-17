@@ -6,7 +6,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     rename      = require('gulp-rename'),
     shell       = require('gulp-shell'),
-    svgstore = require('gulp-svgstore');
+    svgstore    = require('gulp-svgstore');
 
     base_theme_path = '../zurb_foundation';
 
